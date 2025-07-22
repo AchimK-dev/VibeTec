@@ -1,0 +1,19 @@
+{
+  "name": "vibetec-fullstack",
+  "version": "1.0.0",
+  "description": "VibeTec - Artist Booking Platform",
+  "scripts": {
+    "install-server": "cd server && npm install",
+    "install-client": "cd client && npm install",
+    "build-client": "cd client && npm run build",
+    "start": "cd server && npm start",
+    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
+    "heroku-postbuild": "npm run install-server && npm run install-client && npm run build-client"
+  },
+  "keywords": ["portfolio", "react", "nodejs", "fullstack", "showcase"],
+  "author": "Your Name",
+  "license": "All Rights Reserved",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}

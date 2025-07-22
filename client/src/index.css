@@ -1,0 +1,123 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Container System für Responsive Design - Höhere Spezifität */
+.page-container {
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  max-width: 1920px !important; /* Full HD Maximum */
+  box-sizing: border-box !important;
+}
+
+/* Responsive Padding mit höherer Spezifität */
+@media (min-width: 640px) {  /* sm */
+  .page-container {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+}
+
+@media (min-width: 768px) {  /* md */
+  .page-container {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
+
+@media (min-width: 1024px) { /* lg */
+  .page-container {
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important;
+  }
+}
+
+@media (min-width: 1280px) { /* xl */
+  .page-container {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  .page-container {
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+  }
+}
+
+/* Spezifische Overrides für DaisyUI Komponenten - Radikaler Ansatz */
+.bg-sky-950 {
+  background-color: rgb(12 74 110) !important;
+}
+
+/* Wrapper für maximale Breite */
+.max-width-wrapper {
+  max-width: 1920px !important;
+  margin: 0 auto !important;
+  width: 100% !important;
+}
+
+.navbar .page-container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  max-width: 1920px !important;
+  margin: 0 auto !important;
+}
+
+.footer .page-container {
+  max-width: 1920px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+
+/* Full-Width für spezielle Bereiche */
+.full-width {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  max-width: none;
+}
+
+/* Page Container ohne Padding für Grid-Layouts */
+.page-container-no-padding {
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  max-width: 1920px !important; /* Full HD Maximum */
+  box-sizing: border-box !important;
+}
+
+/* Custom Grid Layouts */
+.grid-1-2-1 {
+  display: grid !important;
+  grid-template-columns: 1fr 2fr 1fr !important;
+  gap: 1rem !important;
+}
+
+.grid-custom-3col {
+  display: grid !important;
+  grid-template-columns: 25% 50% 25% !important;
+  gap: 1rem !important;
+}
+
+/* Grid mit 1:2 Verhältnis für Reihen */
+.grid-rows-1-2 {
+  display: grid !important;
+  grid-template-rows: 1fr 2fr !important;
+  gap: 1rem !important;
+}
+
+/* Hide scrollbar for carousel */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
