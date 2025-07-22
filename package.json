@@ -8,7 +8,8 @@
     "build-client": "cd client && npm run build",
     "build": "npm install && npm run install-server && npm run install-client && npm run build-client",
     "start": "cd server && npm start",
-    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\""
+    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
+    "prepare": "npm run install-client"
   },
   "keywords": ["portfolio", "react", "nodejs", "fullstack", "showcase", "artist-booking", "mongodb", "express"],
   "author": "Your Name",
