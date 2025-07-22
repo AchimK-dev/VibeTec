@@ -3,7 +3,6 @@ services:
     name: vibetec-app
     env: node
     plan: free
-    rootDir: ./server
     buildCommand: npm run build
     startCommand: npm start
     envVars:
