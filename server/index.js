@@ -32,10 +32,11 @@ if (process.env.NODE_ENV === 'production') {
   const buildPath = path.join(__dirname, '../client/dist');
   app.use(express.static(buildPath));
 
-  app.get('*splat', (req, res) => res.sendFile(path.join(buildPath, 'index.html')));
+  app.get('*', (req, res) => res.sendFile(path.join(buildPath, 'index.html')));
+} else {
+  // THIS SHOULD BE BEFORE THE ERROR HANDLERs - only in development
+  app.use((req, res) => res.status(404).json({ error: 'Not found' }));
 }
-// THIS SHOULD BE BEFORE THE ERROR HANDLERs
-app.use((req, res) => res.status(404).json({ error: 'Not found' }));
 app.use(errorHandler);
 
 app.listen(port, () => console.log(`Server listening on http://localhost:${port}`));
