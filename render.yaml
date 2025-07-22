@@ -3,11 +3,12 @@ services:
     name: vibetec-app
     env: node
     plan: free
+    rootDir: ./server
     buildCommand: npm run build
     startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production
       - key: CLIENT_URL
-        value: https://vibetec-app.onrender.com
+        value: https://vibetec.onrender.com
     healthCheckPath: /

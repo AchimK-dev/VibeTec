@@ -6,11 +6,9 @@
     "install-server": "cd server && npm install",
     "install-client": "cd client && npm install",
     "build-client": "cd client && npm run build",
-    "build": "npm run install-server && npm run install-client && npm run build-client",
+    "build": "npm install && npm run install-server && npm run install-client && npm run build-client",
     "start": "cd server && npm start",
-    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
-    "heroku-postbuild": "npm run build",
-    "render-build": "npm run build"
+    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\""
   },
   "keywords": ["portfolio", "react", "nodejs", "fullstack", "showcase", "artist-booking", "mongodb", "express"],
   "author": "Your Name",
@@ -19,6 +17,7 @@
     "node": ">=18.0.0",
     "npm": ">=8.0.0"
   },
+  "dependencies": {},
   "devDependencies": {
     "concurrently": "^7.6.0"
   }
