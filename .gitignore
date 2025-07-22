@@ -18,6 +18,7 @@ npm-debug.log*
 logs/
 
 # Editor files
+.github/
 .vscode/
 .idea/
 *.swp

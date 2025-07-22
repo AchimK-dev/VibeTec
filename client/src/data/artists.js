@@ -32,6 +32,7 @@ export const deleteArtist = async (id) => {
 };
 
 export const checkAvailability = async (id, date, startTime, endTime) => {
+  if (!id) return null;
   const { data } = await api.get(`${baseURL}/${id}/availability`, {
     params: { date, startTime, endTime }
   });
