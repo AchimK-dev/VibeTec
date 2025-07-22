@@ -1,7 +1,7 @@
 {
   "name": "vibetec-fullstack",
   "version": "1.0.0",
-  "description": "VibeTec - Artist Booking Platform",
+  "description": "🎵 Modern artist booking platform - Full-stack portfolio project with React, Node.js & MongoDB",
   "scripts": {
     "install-server": "cd server && npm install",
     "install-client": "cd client && npm install",
@@ -10,9 +10,13 @@
     "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
     "heroku-postbuild": "npm run install-server && npm run install-client && npm run build-client"
   },
-  "keywords": ["portfolio", "react", "nodejs", "fullstack", "showcase"],
+  "keywords": ["portfolio", "react", "nodejs", "fullstack", "showcase", "artist-booking", "mongodb", "express"],
   "author": "Your Name",
   "license": "All Rights Reserved",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
   "devDependencies": {
     "concurrently": "^7.6.0"
   }

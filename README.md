@@ -4,7 +4,7 @@
 
 A comprehensive artist booking platform that demonstrates modern web development practices and full-stack capabilities. Built with security, scalability, and user experience in mind.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-🌐%20View%20Site-brightgreen)](https://your-render-url.com)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-🌐%20View%20Site-brightgreen)](https://vibetec.onrender.com)
 [![Tech Stack](https://img.shields.io/badge/Stack-React%20%7C%20Node.js%20%7C%20MongoDB-blue)](#-tech-stack)
 [![Portfolio](https://img.shields.io/badge/Portfolio-📂%20Project-orange)](#-contact--portfolio)
 
