@@ -77,7 +77,8 @@ const EditArtist = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-600">
+    <div className="page-container-no-padding">
+    <div className="min-h-screen rounded-xl bg-[#0C0F1A]">
       <div className="container mx-auto px-4 py-8">
       <div className="max-w-2xl mx-auto">
         <div className="mb-8">
@@ -85,10 +86,10 @@ const EditArtist = () => {
           <p className="text-white">Update the artist information</p>
         </div>
 
-        <div className="bg-gray-800 rounded-lg shadow-lg p-8">
+        <div className="bg-[#0C0F1A] border-1 border-[#BDFF00] rounded-xl shadow-lg p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
                 Artist Name *
               </label>
               <input
@@ -97,14 +98,14 @@ const EditArtist = () => {
                 name="name"
                 value={name}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-[#BDFF00] rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Enter artist name"
                 required
               />
             </div>
 
             <div>
-              <label htmlFor="musicGenre" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="musicGenre" className="block text-sm font-medium text-white mb-2">
                 Music Genre *
               </label>
               <select
@@ -112,7 +113,7 @@ const EditArtist = () => {
                 name="musicGenre"
                 value={musicGenre}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-[#BDFF00] rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 required
               >
                 <option value="">Select a genre</option>
@@ -131,7 +132,7 @@ const EditArtist = () => {
             </div>
 
             <div>
-              <label htmlFor="image" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="image" className="block text-sm font-medium text-white mb-2">
                 Image URL *
               </label>
               <input
@@ -140,7 +141,7 @@ const EditArtist = () => {
                 name="image"
                 value={image}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-[#BDFF00] rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="https://example.com/image.jpg"
                 required
               />
@@ -159,7 +160,7 @@ const EditArtist = () => {
             </div>
 
             <div>
-              <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="description" className="block text-sm font-medium text-white mb-2">
                 Description *
               </label>
               <textarea
@@ -168,14 +169,14 @@ const EditArtist = () => {
                 value={description}
                 onChange={handleChange}
                 rows={4}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-[#BDFF00] rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Describe the artist's style, experience, and specialties..."
                 required
               />
             </div>
 
             <div>
-              <label htmlFor="pricePerHour" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="pricePerHour" className="block text-sm font-medium text-white mb-2">
                 Price per Hour (€) *
               </label>
               <input
@@ -186,7 +187,7 @@ const EditArtist = () => {
                 onChange={handleChange}
                 min="1"
                 step="0.01"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-[#BDFF00] rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="150.00"
                 required
               />
@@ -196,14 +197,14 @@ const EditArtist = () => {
               <button
                 type="button"
                 onClick={() => navigate(`/artist/${id}`)}
-                className="flex-1 px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium"
+                className="flex-1 px-6 py-3 border border-[#BDFF00] text-white rounded-3xl hover:bg-gray-50 transition-colors font-medium"
               >
                 Cancel
               </button>
               <button
                 type="submit"
                 disabled={loading}
-                className="flex-1 px-6 py-3 text-black font-bold rounded-lg transition-colors disabled:opacity-50"
+                className="flex-1 px-6 py-3 text-black font-bold rounded-3xl transition-colors disabled:opacity-50"
                 style={{backgroundColor: '#BDFF00', border: 'none'}}
               >
                 {loading ? 'Updating...' : 'Update Artist'}
@@ -213,6 +214,7 @@ const EditArtist = () => {
         </div>
       </div>
       </div>
+    </div>
     </div>
   );
 };

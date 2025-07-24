@@ -53,7 +53,7 @@ const ArtistCard = ({ _id, name, musicGenre, image, description, pricePerHour, b
         <img 
           src={image} 
           alt={name}
-          className='w-full h-64 object-cover'
+          className='w-full h-80 object-cover'
         />
         <div className={`absolute top-4 right-4 badge ${statusColor} text-white font-bold`}>
           {statusText}

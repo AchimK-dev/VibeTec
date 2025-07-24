@@ -20,6 +20,11 @@ const Artists = () => {
     })();
   }, []);
 
+  useEffect(() => {
+    // Scroll to top when page loads
+    window.scrollTo(0, 0);
+  }, []);
+
   if (loading) return (
     <div className="flex justify-center items-center min-h-screen">
       <span className="loading loading-spinner loading-lg"></span>
@@ -32,9 +37,9 @@ const Artists = () => {
       <div className="w-full grid grid-cols-1 gap-4 grid-rows-1-2">
         
         {/* Erste Kachel - Artist Carousel (33.33% der Höhe) */}
-        <div className="bg-white rounded-xl shadow-lg p-4 flex flex-col">
+        <div className="bg-[#0C0F1A] rounded-xl shadow-lg p-4 flex flex-col">
           <div className="text-center m-20">
-            <h2 className="text-3xl lg:text-6xl font-bold text-gray-800">OUR ARTISTS</h2>
+            <h2 className="text-3xl lg:text-6xl font-bold text-White">OUR ARTISTS</h2>
           </div>
           <div className="flex-1 flex items-center justify-center">
             <ArtistCarousel />
@@ -42,7 +47,7 @@ const Artists = () => {
         </div>
         
         {/* Zweite Kachel - Artists Grid (66.66% der Höhe) */}
-        <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col">
+        <div className="bg-[#0C0F1A] rounded-xl shadow-lg p-8 flex flex-col">
           <div className="flex-1">
             {artists && artists.length > 0 ? (
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>

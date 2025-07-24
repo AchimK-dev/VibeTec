@@ -74,12 +74,12 @@ const UserProfile = () => {
       <div className="w-full min-h-screen">
         
         {/* User Profil Kachel (volle Breite) */}
-        <div className="bg-white rounded-xl shadow-lg p-6 lg:p-12 min-h-screen flex flex-col">
+        <div className="bg-[#0C0F1A] rounded-xl shadow-lg p-6 lg:p-12 min-h-screen flex flex-col">
           <div className="w-full max-w-7xl mx-auto">
             
             {/* Header Section */}
             <div className="text-center mb-8 lg:mb-12">
-              <h1 className="text-3xl lg:text-5xl font-bold text-gray-800 mb-6 lg:mb-8">User Profile</h1>
+              <h1 className="text-3xl lg:text-5xl font-bold text-white mb-6 lg:mb-8">User Profile</h1>
               
               {/* User Avatar and Basic Info */}
               <div className="flex flex-col items-center mb-6 lg:mb-8">
@@ -88,7 +88,7 @@ const UserProfile = () => {
                     {user?.firstName?.[0]}{user?.lastName?.[0]}
                   </span>
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-3">
+                <h2 className="text-2xl lg:text-3xl font-bold text- mb-3">
                   {user?.firstName} {user?.lastName}
                 </h2>
                 <div className={`badge badge-lg px-4 lg:px-6 py-2 lg:py-3 text-base lg:text-lg ${user?.role === 'ADMIN' ? 'bg-red-500 text-white' : 'bg-blue-500 text-white'}`}>
@@ -101,21 +101,21 @@ const UserProfile = () => {
             <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 lg:gap-12">
               
               {/* Account Information Section */}
-              <div className="bg-gray-50 rounded-xl p-6 lg:p-8 shadow-md">
-                <h2 className="text-xl lg:text-2xl font-bold mb-6 text-gray-800 border-b-2 border-[#BDFF00] pb-3">Account Information</h2>
+              <div className="bg-[#0C0F1A] border-1 border-[#BDFF00] rounded-xl p-6 lg:p-8 shadow-md">
+                <h2 className="text-xl lg:text-2xl font-bold mb-6 text-white border-b-2 border-[#BDFF00] pb-3">Account Information</h2>
                 <div className="space-y-4 lg:space-y-6">
-                  <div className="bg-white rounded-lg p-4 lg:p-6 border-l-4 border-[#BDFF00]">
-                    <label className="block text-xs lg:text-sm font-bold text-gray-600 mb-2 uppercase tracking-wide">
+                  <div className="bg-[#0C0F1A] border-1 border-[#BDFF00] rounded-lg p-4 lg:p-6">
+                    <label className="block text-xs lg:text-sm font-bold text-white mb-2 uppercase tracking-wide">
                       Email Address
                     </label>
-                    <p className="text-lg lg:text-xl text-gray-800 font-medium break-all">{user?.email}</p>
+                    <p className="text-lg lg:text-xl text-white font-medium break-all">{user?.email}</p>
                   </div>
 
-                  <div className="bg-white rounded-lg p-4 lg:p-6 border-l-4 border-[#BDFF00]">
-                    <label className="block text-xs lg:text-sm font-bold text-gray-600 mb-2 uppercase tracking-wide">
+                  <div className="bg-[#0C0F1A] border-1 border-[#BDFF00] rounded-lg p-4 lg:p-6">
+                    <label className="block text-xs lg:text-sm font-bold text-white mb-2 uppercase tracking-wide">
                       Member Since
                     </label>
-                    <p className="text-lg lg:text-xl text-gray-800 font-medium">
+                    <p className="text-lg lg:text-xl text-white font-medium">
                       {new Date(user?.createdAt).toLocaleDateString('en-US', {
                         year: 'numeric',
                         month: 'long',
@@ -125,7 +125,7 @@ const UserProfile = () => {
                   </div>
 
                   {user?.role === 'ADMIN' && (
-                    <div className="bg-red-50 rounded-lg p-4 lg:p-6 border-l-4 border-red-500">
+                    <div className="bg-[#0C0F1A] rounded-lg p-4 lg:p-6 border-1 border-red-500">
                       <label className="block text-xs lg:text-sm font-bold text-red-700 mb-3 uppercase tracking-wide">
                         Administrator Privileges
                       </label>
@@ -141,31 +141,31 @@ const UserProfile = () => {
               </div>
 
               {/* My Bookings Quick Access Section */}
-              <div className="bg-gray-50 rounded-xl p-6 lg:p-8 shadow-md">
-                <h2 className="text-xl lg:text-2xl font-bold mb-6 text-gray-800 border-b-2 border-[#BDFF00] pb-3">My Bookings</h2>
+              <div className="bg-[#0C0F1A] border-1 border-[#BDFF00] rounded-xl p-6 lg:p-8 shadow-md">
+                <h2 className="text-xl lg:text-2xl font-bold mb-6 text-white border-b-2 border-[#BDFF00] pb-3">My Bookings</h2>
                 <div className="space-y-4 lg:space-y-6">
                   
                   {/* Quick Stats */}
-                  <div className="bg-white rounded-lg p-4 lg:p-6 border-l-4 border-blue-500">
+                  <div className="bg-[#0C0F1A] border-1 border-[#BDFF00] rounded-lg p-4 lg:p-6">
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-3xl lg:text-4xl">📅</span>
                       <div className="text-right">
-                        <p className="text-xl lg:text-2xl font-bold text-gray-800">{bookingStats.total}</p>
-                        <p className="text-xs lg:text-sm text-gray-600">Total Bookings</p>
+                        <p className="text-xl lg:text-2xl font-bold text-white">{bookingStats.total}</p>
+                        <p className="text-xs lg:text-sm text-white">Total Bookings</p>
                       </div>
                     </div>
                     <div className="grid grid-cols-3 gap-2 lg:gap-3 text-center text-xs lg:text-sm">
                       <div>
                         <p className="font-bold text-yellow-600">{bookingStats.pending}</p>
-                        <p className="text-gray-600">Pending</p>
+                        <p className="text-white">Pending</p>
                       </div>
                       <div>
                         <p className="font-bold text-green-600">{bookingStats.confirmed}</p>
-                        <p className="text-gray-600">Confirmed</p>
+                        <p className="text-white">Confirmed</p>
                       </div>
                       <div>
                         <p className="font-bold text-red-600">{bookingStats.rejected}</p>
-                        <p className="text-gray-600">Rejected</p>
+                        <p className="text-white">Rejected</p>
                       </div>
                     </div>
                   </div>
@@ -183,7 +183,8 @@ const UserProfile = () => {
                       </span>
                     </button>
                     <button 
-                      className="btn w-full bg-blue-500 hover:bg-blue-600 text-white border-blue-500 hover:border-blue-600 rounded-3xl py-2 lg:py-3 text-sm lg:text-base"
+                      className="btn w-full text-black font-bold hover:scale-105 transition-all duration-200 rounded-3xl py-2 lg:py-3 text-sm lg:text-base"
+                      style={{backgroundColor: '#BDFF00', border: 'none'}}
                       onClick={() => window.location.href = '/artists'}
                     >
                       <span className="flex items-center justify-center gap-2">
@@ -194,9 +195,9 @@ const UserProfile = () => {
                   </div>
 
                   {/* Recent Activity Hint */}
-                  <div className="bg-blue-50 rounded-lg p-3 lg:p-4 border-l-4 border-blue-500">
-                    <h4 className="font-bold text-blue-800 mb-2 text-sm lg:text-base">💡 Quick Tip</h4>
-                    <p className="text-xs lg:text-sm text-blue-700">
+                  <div className="bg-[#0C0F1A] border-1 border-[#BDFF00] rounded-lg p-3 lg:p-4">
+                    <h4 className="font-bold text-gray-400 mb-2 text-sm lg:text-base">💡 Quick Tip</h4>
+                    <p className="text-xs lg:text-sm text-gray-400">
                       View and manage all your artist bookings from one place. Track booking status, edit event details, and communicate with artists.
                     </p>
                   </div>
@@ -204,16 +205,16 @@ const UserProfile = () => {
               </div>
 
               {/* Change Password Section */}
-              <div className="bg-gray-50 rounded-xl p-6 lg:p-8 shadow-md">
-                <h2 className="text-xl lg:text-2xl font-bold mb-6 text-gray-800 border-b-2 border-[#BDFF00] pb-3">Change Password</h2>
+              <div className="bg-[#0C0F1A] border-1 border-[#BDFF00] rounded-xl p-6 lg:p-8 shadow-md">
+                <h2 className="text-xl lg:text-2xl font-bold mb-6 text-white border-b-2 border-[#BDFF00] pb-3">Change Password</h2>
                 <form onSubmit={handlePasswordChange} className="space-y-4 lg:space-y-6">
                   <div>
-                    <label className="block text-xs lg:text-sm font-bold text-gray-600 mb-2 uppercase tracking-wide">
+                    <label className="block text-xs lg:text-sm font-bold text-white mb-2 uppercase tracking-wide">
                       Current Password *
                     </label>
                     <input
                       type="password"
-                      className="input w-full bg-white border-2 border-gray-300 text-black placeholder-gray-400 focus:border-[#BDFF00] focus:ring-2 focus:ring-[#BDFF00] focus:ring-opacity-50 rounded-lg p-3 lg:p-4 text-sm lg:text-base"
+                      className="input w-full bg-[#0C0F1A] border-1 border-[#BDFF00] text-white placeholder-gray-400 focus:border-[#BDFF00] focus:ring-2 focus:ring-[#BDFF00] focus:ring-opacity-50 rounded-lg p-4"
                       placeholder="Enter current password"
                       value={passwordForm.currentPassword}
                       onChange={(e) => setPasswordForm(prev => ({
@@ -225,12 +226,12 @@ const UserProfile = () => {
                   </div>
 
                   <div>
-                    <label className="block text-xs lg:text-sm font-bold text-gray-600 mb-2 uppercase tracking-wide">
+                    <label className="block text-xs lg:text-sm font-bold text-white mb-2 uppercase tracking-wide">
                       New Password *
                     </label>
                     <input
                       type="password"
-                      className="input w-full bg-white border-2 border-gray-300 text-black placeholder-gray-400 focus:border-[#BDFF00] focus:ring-2 focus:ring-[#BDFF00] focus:ring-opacity-50 rounded-lg p-3 lg:p-4 text-sm lg:text-base"
+                      className="input w-full bg-[#0C0F1A] border-1 border-[#BDFF00] text-white placeholder-gray-400 focus:border-[#BDFF00] focus:ring-2 focus:ring-[#BDFF00] focus:ring-opacity-50 rounded-lg p-4"
                       placeholder="Enter new password (min 8 characters)"
                       value={passwordForm.newPassword}
                       onChange={(e) => setPasswordForm(prev => ({
@@ -243,12 +244,12 @@ const UserProfile = () => {
                   </div>
 
                   <div>
-                    <label className="block text-xs lg:text-sm font-bold text-gray-600 mb-2 uppercase tracking-wide">
+                    <label className="block text-xs lg:text-sm font-bold text-white mb-2 uppercase tracking-wide">
                       Confirm New Password *
                     </label>
                     <input
                       type="password"
-                      className="input w-full bg-white border-2 border-gray-300 text-black placeholder-gray-400 focus:border-[#BDFF00] focus:ring-2 focus:ring-[#BDFF00] focus:ring-opacity-50 rounded-lg p-3 lg:p-4 text-sm lg:text-base"
+                      className="input w-full bg-[#0C0F1A] border-1 border-[#BDFF00] text-white placeholder-gray-400 focus:border-[#BDFF00] focus:ring-2 focus:ring-[#BDFF00] focus:ring-opacity-50 rounded-lg p-4"
                       placeholder="Confirm new password"
                       value={passwordForm.confirmPassword}
                       onChange={(e) => setPasswordForm(prev => ({
@@ -262,7 +263,7 @@ const UserProfile = () => {
                   <div className="flex flex-col sm:flex-row gap-4 pt-4 lg:pt-6">
                     <button
                       type="button"
-                      className="btn flex-1 bg-gray-400 hover:bg-gray-500 text-white border-gray-400 hover:border-gray-500 rounded-3xl py-2 lg:py-3 font-semibold transition-all duration-200 text-sm lg:text-base"
+                      className="btn flex-1 bg-[#0C0F1A] border-1 border-[#BDFF00] text-white font-bold hover:scale-105 transition-all duration-200 rounded-3xl py-3"
                       onClick={() => setPasswordForm({
                         currentPassword: '',
                         newPassword: '',
@@ -273,7 +274,7 @@ const UserProfile = () => {
                     </button>
                     <button
                       type="submit"
-                      className="btn flex-1 text-black font-bold hover:scale-105 transition-all duration-200 rounded-3xl py-2 lg:py-3 text-sm lg:text-base"
+                      className="btn flex-1 text-black font-bold hover:scale-105 transition-all duration-200 rounded-3xl py-3"
                       style={{backgroundColor: '#BDFF00', border: 'none'}}
                       disabled={loading}
                     >

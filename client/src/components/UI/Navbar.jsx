@@ -10,7 +10,7 @@ const Navbar = () => {
   
   return (
     <div className='max-width-wrapper'>
-      <div className='bg-sky-950 text-white mt-3 mb-3 rounded-xl font-bold'>
+      <div className='bg-sky-950 text-white mb-3 rounded-xl font-bold'>
         <div className='page-container'>
           <div className='navbar min-h-30'>
             <div className='flex-1'>

@@ -112,8 +112,9 @@ const ArtistDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-600">
-      <div className="container mx-auto px-4 py-8 max-w-6xl">
+    <div className="page-container-no-padding">
+    <div className="min-h-screen rounded-xl bg-[#0C0F1A]">
+      <div className="container mx-auto px-4 py-8 max-w-7xl">
       
       {/* Artist Info Section */}
       <div className="flex flex-col lg:flex-row gap-8 mb-12">
@@ -201,6 +202,7 @@ const ArtistDetail = () => {
         onDateTimeSelect={handleBookingContinue}
       />
       </div>
+    </div>
     </div>
   );
 };

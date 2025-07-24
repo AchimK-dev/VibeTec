@@ -190,24 +190,24 @@ const ModernAdminDashboard = () => {
   return (
     <div className="page-container-no-padding">
       <div className="w-full min-h-screen">
-        <div className="bg-white rounded-xl shadow-lg p-12 min-h-screen">
+        <div className="bg-[#0C0F1A] rounded-xl shadow-lg p-12 min-h-screen">
           <div className="w-full max-w-7xl mx-auto">
             
             {/* Header Section */}
             <div className="text-center mb-12">
-              <h1 className="text-5xl font-bold text-gray-800 mb-4">Admin Dashboard</h1>
-              <p className="text-xl text-gray-600">Comprehensive management center for VibeTec</p>
+              <h1 className="text-5xl font-bold text-white mb-4">Admin Dashboard</h1>
+              <p className="text-xl text-white">Comprehensive management center for VibeTec</p>
             </div>
 
             {/* Navigation Tabs */}
             <div className="flex justify-center mb-12">
-              <div className="bg-gray-100 rounded-xl p-2 flex space-x-2">
+              <div className="bg-[#0C0F1A] border-1 border-[#BDFF00] rounded-xl p-2 flex space-x-2">
                 <button
                   onClick={() => setActiveTab('overview')}
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
                     activeTab === 'overview' 
                       ? 'bg-[#BDFF00] text-black shadow-md' 
-                      : 'text-gray-600 hover:text-gray-800'
+                      : 'text-white hover:text-gray-400'
                   }`}
                 >
                   📊 Overview
@@ -217,7 +217,7 @@ const ModernAdminDashboard = () => {
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
                     activeTab === 'bookings' 
                       ? 'bg-[#BDFF00] text-black shadow-md' 
-                      : 'text-gray-600 hover:text-gray-800'
+                      : 'text-white hover:text-gray-400'
                   }`}
                 >
                   📅 Bookings
@@ -227,7 +227,7 @@ const ModernAdminDashboard = () => {
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
                     activeTab === 'users' 
                       ? 'bg-[#BDFF00] text-black shadow-md' 
-                      : 'text-gray-600 hover:text-gray-800'
+                      : 'text-white hover:text-gray-400'
                   }`}
                 >
                   👥 Users
@@ -237,7 +237,7 @@ const ModernAdminDashboard = () => {
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
                     activeTab === 'artists' 
                       ? 'bg-[#BDFF00] text-black shadow-md' 
-                      : 'text-gray-600 hover:text-gray-800'
+                      : 'text-white hover:text-gray-400'
                   }`}
                 >
                   🎵 Create Artist
@@ -250,40 +250,40 @@ const ModernAdminDashboard = () => {
               <div className="space-y-8">
                 {/* Stats Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl p-6 text-white">
+                  <div className="bg-[#0C0F1A] border-1 border-[#BDFF00] rounded-xl p-6 text-white">
                     <div className="flex items-center justify-between">
                       <div>
-                        <p className="text-blue-100">Total Bookings</p>
+                        <p className="text-white">Total Bookings</p>
                         <p className="text-3xl font-bold">{totalBookings}</p>
                       </div>
                       <div className="text-4xl">📅</div>
                     </div>
                   </div>
                   
-                  <div className="bg-gradient-to-r from-yellow-500 to-orange-500 rounded-xl p-6 text-white">
+                  <div className="bg-[#0C0F1A] border-1 border-[#BDFF00] rounded-xl p-6 text-white">
                     <div className="flex items-center justify-between">
                       <div>
-                        <p className="text-yellow-100">Pending</p>
+                        <p className="text-white">Pending</p>
                         <p className="text-3xl font-bold">{pendingBookings}</p>
                       </div>
                       <div className="text-4xl">⏳</div>
                     </div>
                   </div>
                   
-                  <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-xl p-6 text-white">
+                  <div className="bg-[#0C0F1A] border-1 border-[#BDFF00] rounded-xl p-6 text-white">
                     <div className="flex items-center justify-between">
                       <div>
-                        <p className="text-green-100">Confirmed</p>
+                        <p className="text-white">Confirmed</p>
                         <p className="text-3xl font-bold">{confirmedBookings}</p>
                       </div>
                       <div className="text-4xl">✅</div>
                     </div>
                   </div>
                   
-                  <div className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl p-6 text-white">
+                  <div className="bg-[#0C0F1A] border-1 border-[#BDFF00] rounded-xl p-6 text-white">
                     <div className="flex items-center justify-between">
                       <div>
-                        <p className="text-purple-100">Total Users</p>
+                        <p className="text-white">Total Users</p>
                         <p className="text-3xl font-bold">{totalUsers}</p>
                       </div>
                       <div className="text-4xl">👥</div>
@@ -292,34 +292,34 @@ const ModernAdminDashboard = () => {
                 </div>
 
                 {/* Quick Actions */}
-                <div className="bg-gray-50 rounded-xl p-8">
-                  <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-[#BDFF00] pb-3">Quick Actions</h2>
+                <div className="bg-[#0C0F1A] border-1 border-[#BDFF00] rounded-xl p-8">
+                  <h2 className="text-2xl font-bold text-White mb-6 border-b-2 border-[#BDFF00] pb-3">Quick Actions</h2>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <button
                       onClick={() => setActiveTab('bookings')}
-                      className="bg-white rounded-lg p-6 border-l-4 border-blue-500 hover:shadow-md transition-shadow"
+                      className="bg-[#0C0F1A] rounded-lg p-6 border-1 border-[#BDFF00] hover:shadow-md transition-shadow"
                     >
                       <div className="text-3xl mb-3">📅</div>
-                      <h3 className="font-bold text-gray-800 mb-2">Manage Bookings</h3>
-                      <p className="text-gray-600 text-sm">View and confirm artist bookings</p>
+                      <h3 className="font-bold text-white mb-2">Manage Bookings</h3>
+                      <p className="text-white text-sm">View and confirm artist bookings</p>
                     </button>
                     
                     <button
                       onClick={() => setActiveTab('users')}
-                      className="bg-white rounded-lg p-6 border-l-4 border-purple-500 hover:shadow-md transition-shadow"
+                      className="bg-[#0C0F1A] rounded-lg p-6 border-1 border-[#BDFF00] hover:shadow-md transition-shadow"
                     >
                       <div className="text-3xl mb-3">👥</div>
-                      <h3 className="font-bold text-gray-800 mb-2">Manage Users</h3>
-                      <p className="text-gray-600 text-sm">Control user accounts and permissions</p>
+                      <h3 className="font-bold text-white mb-2">Manage Users</h3>
+                      <p className="text-white text-sm">Control user accounts and permissions</p>
                     </button>
                     
                     <button
                       onClick={() => setActiveTab('artists')}
-                      className="bg-white rounded-lg p-6 border-l-4 border-green-500 hover:shadow-md transition-shadow"
+                      className="bg-[#0C0F1A] rounded-lg p-6 border-1 border-[#BDFF00] hover:shadow-md transition-shadow"
                     >
                       <div className="text-3xl mb-3">🎵</div>
-                      <h3 className="font-bold text-gray-800 mb-2">Add Artists</h3>
-                      <p className="text-gray-600 text-sm">Create new artist profiles</p>
+                      <h3 className="font-bold text-white mb-2">Add Artists</h3>
+                      <p className="text-white text-sm">Create new artist profiles</p>
                     </button>
                   </div>
                 </div>
@@ -330,12 +330,12 @@ const ModernAdminDashboard = () => {
             {activeTab === 'bookings' && (
               <div className="space-y-6">
                 <div className="flex justify-between items-center">
-                  <h2 className="text-3xl font-bold text-gray-800">Booking Management</h2>
+                  <h2 className="text-3xl font-bold text-white">Booking Management</h2>
                   <div className="flex space-x-2">
                     <button
                       onClick={() => setBookingFilter('all')}
                       className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                        bookingFilter === 'all' ? 'bg-[#BDFF00] text-black' : 'bg-gray-200 text-gray-800'
+                        bookingFilter === 'all' ? 'bg-[#BDFF00] text-black' : 'bg-[#0C0F1A] border-1 border-[#BDFF00] text-white'
                       }`}
                     >
                       All ({totalBookings})
@@ -343,7 +343,7 @@ const ModernAdminDashboard = () => {
                     <button
                       onClick={() => setBookingFilter('pending')}
                       className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                        bookingFilter === 'pending' ? 'bg-[#BDFF00] text-black' : 'bg-gray-200 text-gray-800'
+                        bookingFilter === 'pending' ? 'bg-[#BDFF00] text-black' : 'bg-[#0C0F1A] border-1 border-[#BDFF00] text-white'
                       }`}
                     >
                       Pending ({pendingBookings})
@@ -351,7 +351,7 @@ const ModernAdminDashboard = () => {
                     <button
                       onClick={() => setBookingFilter('confirmed')}
                       className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                        bookingFilter === 'confirmed' ? 'bg-[#BDFF00] text-black' : 'bg-gray-200 text-gray-800'
+                        bookingFilter === 'confirmed' ? 'bg-[#BDFF00] text-black' : 'bg-[#0C0F1A] border-1 border-[#BDFF00] text-white'
                       }`}
                     >
                       Confirmed ({confirmedBookings})
@@ -364,10 +364,10 @@ const ModernAdminDashboard = () => {
                     <div className="loading loading-spinner loading-lg"></div>
                   </div>
                 ) : filteredBookings.length === 0 ? (
-                  <div className="text-center py-16 bg-gray-50 rounded-xl">
+                  <div className="text-center py-16 bg-[#0C0F1A] rounded-xl">
                     <div className="text-6xl mb-4">📅</div>
-                    <h3 className="text-2xl font-bold text-gray-800 mb-2">No bookings found</h3>
-                    <p className="text-gray-800">
+                    <h3 className="text-2xl font-bold text-white mb-2">No bookings found</h3>
+                    <p className="text-white">
                       {bookingFilter === 'pending' 
                         ? 'No pending bookings at the moment' 
                         : bookingFilter === 'confirmed' 
@@ -377,31 +377,31 @@ const ModernAdminDashboard = () => {
                     </p>
                   </div>
                 ) : (
-                  <div className="bg-white rounded-xl shadow-md overflow-hidden">
+                  <div className="bg-gray-800 rounded-xl shadow-md overflow-hidden">
                     <div className="overflow-x-auto">
                       <table className="table w-full">
-                        <thead className="bg-gray-100">
+                        <thead className="bg-gray-900">
                           <tr>
-                            <th className="text-gray-800 font-bold">Status</th>
-                            <th className="text-gray-800 font-bold">Artist</th>
-                            <th className="text-gray-800 font-bold">Date & Time</th>
-                            <th className="text-gray-800 font-bold">Price</th>
-                            <th className="text-gray-800 font-bold">Client</th>
-                            <th className="text-gray-800 font-bold">Event Details</th>
-                            <th className="text-gray-800 font-bold">Booking Date</th>
-                            <th className="text-gray-800 font-bold">Actions</th>
+                            <th className="text-white font-bold">Status</th>
+                            <th className="text-white font-bold">Artist</th>
+                            <th className="text-white font-bold">Date & Time</th>
+                            <th className="text-white font-bold">Price</th>
+                            <th className="text-white font-bold">Client</th>
+                            <th className="text-white font-bold">Event Details</th>
+                            <th className="text-white font-bold">Booking Date</th>
+                            <th className="text-white font-bold">Actions</th>
                           </tr>
                         </thead>
                         <tbody>
                           {filteredBookings.map((booking) => (
-                            <tr key={booking._id} className="hover:bg-gray-50">
+                            <tr key={booking._id} className="hover:bg-gray-900">
                               <td>
                                 <div className={`badge ${booking.isConfirmed ? 'badge-success' : 'badge-warning'}`}>
                                   {booking.isConfirmed ? 'Confirmed' : 'Pending'}
                                 </div>
                               </td>
                               <td>
-                                <div className="font-bold text-gray-800">{booking.artistName}</div>
+                                <div className="font-bold text-white">{booking.artistName}</div>
                               </td>
                               <td>
                                 <div className="font-medium">
@@ -413,7 +413,7 @@ const ModernAdminDashboard = () => {
                                     formatDate(booking.date)
                                   )}
                                 </div>
-                                <div className="text-sm text-gray-800">
+                                <div className="text-sm text-white">
                                   {formatTimeRange(booking)}
                                 </div>
                               </td>
@@ -423,25 +423,25 @@ const ModernAdminDashboard = () => {
                                     {booking.totalPrice}€
                                   </div>
                                 ) : (
-                                  <div className="text-sm text-gray-800">-</div>
+                                  <div className="text-sm text-white">-</div>
                                 )}
                               </td>
                               <td>
                                 <div className="font-medium">{booking.clientName}</div>
                                 {booking.clientEmail && (
-                                  <div className="text-sm text-gray-800">{booking.clientEmail}</div>
+                                  <div className="text-sm text-white">{booking.clientEmail}</div>
                                 )}
                                 {booking.clientPhone && (
-                                  <div className="text-sm text-gray-800">{booking.clientPhone}</div>
+                                  <div className="text-sm text-white">{booking.clientPhone}</div>
                                 )}
                               </td>
                               <td>
-                                <div className="max-w-xs truncate text-gray-800">
+                                <div className="max-w-xs truncate text-white">
                                   {booking.eventDetails || 'No details provided'}
                                 </div>
                               </td>
                               <td>
-                                <div className="text-sm text-gray-800">
+                                <div className="text-sm text-white">
                                   {formatDateTime(booking.createdAt)}
                                 </div>
                               </td>
@@ -486,12 +486,12 @@ const ModernAdminDashboard = () => {
             {activeTab === 'users' && (
               <div className="space-y-6">
                 <div className="flex justify-between items-center">
-                  <h2 className="text-3xl font-bold text-gray-800">User Management</h2>
+                  <h2 className="text-3xl font-bold text-white">User Management</h2>
                   <div className="flex space-x-2">
                     <button
                       onClick={() => setUserFilter('all')}
                       className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                        userFilter === 'all' ? 'bg-[#BDFF00] text-black' : 'bg-gray-200 text-gray-700'
+                        userFilter === 'all' ? 'bg-[#BDFF00] text-black' : 'bg-[#0C0F1A] border-1 border-[#BDFF00] text-white'
                       }`}
                     >
                       All ({totalUsers})
@@ -499,7 +499,7 @@ const ModernAdminDashboard = () => {
                     <button
                       onClick={() => setUserFilter('admin')}
                       className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                        userFilter === 'admin' ? 'bg-[#BDFF00] text-black' : 'bg-gray-200 text-gray-700'
+                        userFilter === 'admin' ? 'bg-[#BDFF00] text-black' : 'bg-[#0C0F1A] border-1 border-[#BDFF00] text-white'
                       }`}
                     >
                       Admins ({adminUsers})
@@ -507,7 +507,7 @@ const ModernAdminDashboard = () => {
                     <button
                       onClick={() => setUserFilter('user')}
                       className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                        userFilter === 'user' ? 'bg-[#BDFF00] text-black' : 'bg-gray-200 text-gray-700'
+                        userFilter === 'user' ? 'bg-[#BDFF00] text-black' : 'bg-[#0C0F1A] border-1 border-[#BDFF00] text-white'
                       }`}
                     >
                       Users ({regularUsers})
@@ -520,10 +520,10 @@ const ModernAdminDashboard = () => {
                     <div className="loading loading-spinner loading-lg"></div>
                   </div>
                 ) : filteredUsers.length === 0 ? (
-                  <div className="text-center py-16 bg-gray-50 rounded-xl">
+                  <div className="text-center py-16 bg-[#0C0F1A] rounded-xl">
                     <div className="text-6xl mb-4">👥</div>
-                    <h3 className="text-2xl font-bold text-gray-600 mb-2">No users found</h3>
-                    <p className="text-gray-500">
+                    <h3 className="text-2xl font-bold text-white mb-2">No users found</h3>
+                    <p className="text-white">
                       {userFilter === 'admin' 
                         ? 'No admin users found' 
                         : userFilter === 'user' 
@@ -533,28 +533,28 @@ const ModernAdminDashboard = () => {
                     </p>
                   </div>
                 ) : (
-                  <div className="bg-white rounded-xl shadow-md overflow-hidden">
+                  <div className="bg-gray-800 rounded-xl shadow-md overflow-hidden">
                     <div className="overflow-x-auto">
                       <table className="table w-full">
-                        <thead className="bg-gray-100">
+                        <thead className="bg-gray-900">
                           <tr>
-                            <th className="text-gray-700 font-bold">User</th>
-                            <th className="text-gray-700 font-bold">Email</th>
-                            <th className="text-gray-700 font-bold">Role</th>
-                            <th className="text-gray-700 font-bold">Member Since</th>
-                            <th className="text-gray-700 font-bold">Actions</th>
+                            <th className="text-white font-bold">User</th>
+                            <th className="text-white font-bold">Email</th>
+                            <th className="text-white font-bold">Role</th>
+                            <th className="text-white font-bold">Member Since</th>
+                            <th className="text-white font-bold">Actions</th>
                           </tr>
                         </thead>
                         <tbody>
                           {filteredUsers.map((userData) => (
-                            <tr key={userData._id} className="hover:bg-gray-50">
+                            <tr key={userData._id} className="hover:bg-gray-900">
                               <td>
-                                <div className="font-bold text-gray-800">
+                                <div className="font-bold text-white">
                                   {userData.firstName} {userData.lastName}
                                 </div>
                               </td>
                               <td>
-                                <span className="text-gray-700">{userData.email}</span>
+                                <span className="text-white">{userData.email}</span>
                               </td>
                               <td>
                                 <div className={`badge ${userData.role === 'ADMIN' ? 'badge-primary' : 'badge-secondary'}`}>
@@ -562,7 +562,7 @@ const ModernAdminDashboard = () => {
                                 </div>
                               </td>
                               <td>
-                                <span className="text-gray-700">
+                                <span className="text-white">
                                   {formatDate(userData.createdAt)}
                                 </span>
                               </td>
@@ -615,12 +615,12 @@ const ModernAdminDashboard = () => {
             {activeTab === 'artists' && (
               <div className="space-y-6">
                 <div className="text-center">
-                  <h2 className="text-3xl font-bold text-gray-800 mb-2">Create New Artist</h2>
-                  <p className="text-gray-600">Add a new artist to the VibeTec platform</p>
+                  <h2 className="text-3xl font-bold text-white mb-2">Create New Artist</h2>
+                  <p className="text-white">Add a new artist to the VibeTec platform</p>
                 </div>
 
                 <div className="max-w-2xl mx-auto">
-                  <div className="bg-gray-50 rounded-xl p-8 shadow-md">
+                  <div className="bg-[#0C0F1A] border-1 border-[#BDFF00] rounded-xl p-8 shadow-md">
                     <form onSubmit={handleCreateArtist} className="space-y-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
@@ -632,7 +632,7 @@ const ModernAdminDashboard = () => {
                             name="name"
                             value={artistForm.name}
                             onChange={handleArtistChange}
-                            className="input w-full bg-white border-2 border-gray-300 text-black placeholder-gray-400 focus:border-[#BDFF00] focus:ring-2 focus:ring-[#BDFF00] focus:ring-opacity-50 rounded-lg p-4"
+                            className="input w-full bg-[#0C0F1A] border-1 border-[#BDFF00] text-white placeholder-gray-400 focus:border-[#BDFF00] focus:ring-2 focus:ring-[#BDFF00] focus:ring-opacity-50 rounded-lg p-4"
                             placeholder="Enter artist name"
                             required
                           />
@@ -647,7 +647,7 @@ const ModernAdminDashboard = () => {
                             name="musicGenre"
                             value={artistForm.musicGenre}
                             onChange={handleArtistChange}
-                            className="input w-full bg-white border-2 border-gray-300 text-black placeholder-gray-400 focus:border-[#BDFF00] focus:ring-2 focus:ring-[#BDFF00] focus:ring-opacity-50 rounded-lg p-4"
+                            className="input w-full bg-[#0C0F1A] border-1 border-[#BDFF00] text-white placeholder-gray-400 focus:border-[#BDFF00] focus:ring-2 focus:ring-[#BDFF00] focus:ring-opacity-50 rounded-lg p-4"
                             placeholder="e.g., Electronic, Hip-Hop, Rock"
                             required
                           />
@@ -663,7 +663,7 @@ const ModernAdminDashboard = () => {
                           name="image"
                           value={artistForm.image}
                           onChange={handleArtistChange}
-                          className="input w-full bg-white border-2 border-gray-300 text-black placeholder-gray-400 focus:border-[#BDFF00] focus:ring-2 focus:ring-[#BDFF00] focus:ring-opacity-50 rounded-lg p-4"
+                          className="input w-full bg-[#0C0F1A] border-1 border-[#BDFF00] text-white placeholder-gray-400 focus:border-[#BDFF00] focus:ring-2 focus:ring-[#BDFF00] focus:ring-opacity-50 rounded-lg p-4"
                           placeholder="https://example.com/image.jpg"
                           required
                         />
@@ -678,7 +678,7 @@ const ModernAdminDashboard = () => {
                           name="pricePerHour"
                           value={artistForm.pricePerHour}
                           onChange={handleArtistChange}
-                          className="input w-full bg-white border-2 border-gray-300 text-black placeholder-gray-400 focus:border-[#BDFF00] focus:ring-2 focus:ring-[#BDFF00] focus:ring-opacity-50 rounded-lg p-4"
+                          className="input w-full bg-[#0C0F1A] border-1 border-[#BDFF00] text-white placeholder-gray-400 focus:border-[#BDFF00] focus:ring-2 focus:ring-[#BDFF00] focus:ring-opacity-50 rounded-lg p-4"
                           placeholder="150"
                           min="1"
                           step="0.01"
@@ -694,7 +694,7 @@ const ModernAdminDashboard = () => {
                           name="description"
                           value={artistForm.description}
                           onChange={handleArtistChange}
-                          className="textarea w-full bg-white border-2 border-gray-300 text-black placeholder-gray-400 focus:border-[#BDFF00] focus:ring-2 focus:ring-[#BDFF00] focus:ring-opacity-50 rounded-lg p-4 h-32"
+                          className="textarea w-full bg-[#0C0F1A] border-1 border-[#BDFF00] text-white placeholder-gray-400 focus:border-[#BDFF00] focus:ring-2 focus:ring-[#BDFF00] focus:ring-opacity-50 rounded-lg p-4 h-32"
                           placeholder="Describe the artist's style, experience, and what makes them unique..."
                           required
                         />
@@ -704,7 +704,7 @@ const ModernAdminDashboard = () => {
                         <button
                           type="button"
                           onClick={() => setArtistForm({ name: '', musicGenre: '', image: '', description: '', pricePerHour: '' })}
-                          className="btn flex-1 bg-gray-400 hover:bg-gray-500 text-white border-gray-400 hover:border-gray-500 rounded-3xl py-3 font-semibold transition-all duration-200"
+                          className="btn flex-1 bg-[#0C0F1A] border-1 border-[#BDFF00] text-white font-bold hover:scale-105 transition-all duration-200 rounded-3xl py-3"
                         >
                           Clear Form
                         </button>

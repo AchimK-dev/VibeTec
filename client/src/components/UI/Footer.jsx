@@ -5,7 +5,7 @@ const Footer = () => {
 
   return (
     <div className='max-width-wrapper'>
-      <footer className="bg-sky-950 mt-3 mb-3 rounded-xl text-white">
+      <footer className="bg-sky-950 mt-3 rounded-xl text-white">
         {/* Kompakter Footer mit Social Media */}
         <div className="page-container py-8">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">

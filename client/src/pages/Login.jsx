@@ -1,5 +1,5 @@
 import { useAuth } from '@/context';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, Navigate, useNavigate, useLocation } from 'react-router';
 import { toast } from 'react-toastify';
 
@@ -37,6 +37,11 @@ const Login = () => {
     }
   };
 
+  useEffect(() => {
+    // Scroll to top when page loads
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="page-container-no-padding">
       {/* 2-Kachel Grid Layout - Links halb so groß wie rechts */}
@@ -53,24 +58,23 @@ const Login = () => {
           <div className="text-6xl mb-4">🎶</div>
           <Link 
             to="/register" 
-            className="btn text-black font-bold text-lg px-8 py-3 hover:scale-105 transition-transform" 
-            style={{backgroundColor: 'white', border: '2px solid #000', borderRadius: '20px'}}
+            className="btn font-bold text-black text-xl bg-white rounded-3xl w-60" style={{border: 'none'}}
           >
             Create Account
           </Link>
         </div>
         
         {/* Zweite Kachel - Rechts mit Login-Formular (66.66% der Breite) */}
-        <div className="col-span-2 bg-white rounded-xl shadow-lg p-8 flex flex-col justify-center">
+        <div className="col-span-2 bg-[#0C0F1A] rounded-xl shadow-lg p-8 flex flex-col justify-center">
           <div className="w-full max-w-xs mx-auto">
             <form className='flex flex-col gap-4 items-center' onSubmit={handleSubmit}>
-              <h1 className="text-3xl font-bold text-center mb-6 text-gray-800">Login</h1>
-              <label className='input flex items-center gap-2 w-full bg-white border-2 border-black text-black'>
+              <h1 className="text-3xl font-bold text-center mb-6 text-white">Login</h1>
+              <label className='input flex items-center gap-2 w-full bg-[#0C0F1A] border-1 border-[#BDFF00]'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 16 16'
                   fill='currentColor'
-                  className='h-4 w-4 text-black'
+                  className='h-4 w-4 text-white'
                 >
                   <path d='M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z' />
                   <path d='M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z' />
@@ -80,16 +84,16 @@ const Login = () => {
                   value={email}
                   onChange={handleChange}
                   type='email'
-                  className='grow bg-white text-black placeholder-gray-500'
+                  className='grow bg-[#0C0F1A] text-white placeholder-gray-500'
                   placeholder='Email'
                 />
               </label>
-              <label className='input flex items-center gap-2 w-full bg-white border-2 border-black text-black'>
+              <label className='input flex items-center gap-2 w-full bg-[#0C0F1A] border-1 border-[#BDFF00]'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 16 16'
                   fill='currentColor'
-                  className='h-4 w-4 text-black'
+                  className='h-4 w-4 text-white'
                 >
                   <path
                     fillRule='evenodd'
@@ -102,11 +106,11 @@ const Login = () => {
                   value={password}
                   onChange={handleChange}
                   type='password'
-                  className='grow bg-white text-black placeholder-gray-500'
+                  className='grow bg-[#0C0F1A] text-white placeholder-gray-500'
                   placeholder='Password'
                 />
               </label>
-              <button className='btn self-center text-black font-bold mt-5' disabled={loading} style={{backgroundColor: '#BDFF00'}}>
+              <button className='btn self-center bg-[#BDFF00] text-black rounded-3xl w-40 font-bold mt-5' disabled={loading}>
                 Login
               </button>
               <p className='text-error text-center'>{error}</p>

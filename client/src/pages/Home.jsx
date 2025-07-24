@@ -17,7 +17,7 @@ const Home = () => {
           </p>
           <Link 
             to="/artists" 
-            className="btn text-black bg-white font-bold text-2xl h-25 w-80 mt-20 hover:scale-105 transition-transform" 
+            className="btn text-black bg-white font-bold text-3xl h-25 w-80 mt-20 hover:scale-105 transition-transform" 
             style={{border: 'none', borderRadius: '50px', }}
           >
             BOOK NOW
@@ -37,9 +37,9 @@ const Home = () => {
         </div>
 
         
-        <div className="bg-white rounded-xl shadow-lg p-4 flex flex-col">
+        <div className="bg-[#0C0F1A] rounded-xl shadow-lg p-4 flex flex-col">
           <div className="text-center m-20">
-            <h2 className="text-3xl lg:text-6xl font-bold text-gray-800">OUR ARTISTS</h2>
+            <h2 className="text-3xl lg:text-6xl font-bold text-white">OUR ARTISTS</h2>
           </div>
           <div className="flex-1 flex items-center justify-center">
             <ArtistCarousel />
@@ -47,11 +47,11 @@ const Home = () => {
         </div>
 
         
-        <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col justify-center items-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-6 text-center">
+        <div className="bg-[#0C0F1A] rounded-xl shadow-lg p-8 flex flex-col justify-center items-center">
+          <h2 className="text-3xl lg:text-6xl font-bold text-white mb-10 text-center">
             WHAT'S INCLUDED
           </h2>
-          <ul className="text-lg text-gray-700 space-y-3 mb-8">
+          <ul className="text-3xl text-white space-y-3 mb-8">
             <li className="flex items-start">
               <span className="text-green-500 mr-2">✓</span>
               Professional DJ setup
@@ -75,10 +75,10 @@ const Home = () => {
           </ul>
           <Link 
             to="/artists" 
-            className="btn text-black font-bold text-xl px-8 py-3 hover:scale-105 transition-transform" 
-            style={{backgroundColor: '#BDFF00', border: 'none', borderRadius: '20px'}}
+            className="btn text-black bg-[#BDFF00] font-bold text-3xl h-25 w-80 mt-20 hover:scale-105 transition-transform" 
+            style={{border: 'none', borderRadius: '50px', }}
           >
-            Learn More
+            BOOK NOW
           </Link>
         </div>
 

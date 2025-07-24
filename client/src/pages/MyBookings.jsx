@@ -80,23 +80,23 @@ const MyBookings = () => {
       <div className="w-full min-h-screen">
         
         {/* Main Bookings Kachel (volle Breite) */}
-        <div className="bg-white rounded-xl shadow-lg p-12 min-h-screen">
+        <div className="bg-[#0C0F1A] rounded-xl shadow-lg p-12 min-h-screen">
           <div className="w-full max-w-6xl mx-auto">
             
             {/* Header Section */}
             <div className="text-center mb-12">
-              <h1 className="text-5xl font-bold text-gray-800 mb-4">My Bookings</h1>
-              <p className="text-xl text-gray-600">Manage your artist bookings and event requests</p>
+              <h1 className="text-5xl font-bold text-white mb-4">My Bookings</h1>
+              <p className="text-xl text-white">Manage your artist bookings and event requests</p>
             </div>
 
             {/* Filter and Stats Section */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
               
               {/* Filter Controls */}
-              <div className="bg-gray-50 rounded-xl p-6 shadow-md">
-                <h3 className="text-lg font-bold text-gray-800 mb-4">Filter Bookings</h3>
+              <div className="bg-[#0C0F1A] border-1 border-[#BDFF00] rounded-xl p-6 ">
+                <h3 className="text-lg font-bold text-white mb-4">Filter Bookings</h3>
                 <select 
-                  className="select w-full bg-white border-2 border-gray-300 text-black focus:border-[#BDFF00] focus:ring-2 focus:ring-[#BDFF00] focus:ring-opacity-50 rounded-lg"
+                  className="select w-full bg-[#0C0F1A] border-1 border-[#BDFF00] text-white rounded-lg"
                   value={filter}
                   onChange={(e) => setFilter(e.target.value)}
                 >
@@ -108,21 +108,21 @@ const MyBookings = () => {
               </div>
 
               {/* Quick Stats */}
-              <div className="bg-gray-50 rounded-xl p-6 shadow-md">
-                <h3 className="text-lg font-bold text-gray-800 mb-4">Booking Stats</h3>
+              <div className="bg-[#0C0F1A] border-1 border-[#BDFF00] rounded-xl p-6 shadow-md">
+                <h3 className="text-lg font-bold text-white mb-4">Booking Stats</h3>
                 <div className="space-y-2">
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Total:</span>
+                    <span className="text-white">Total:</span>
                     <span className="font-bold">{bookings.length}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Confirmed:</span>
+                    <span className="text-white">Confirmed:</span>
                     <span className="font-bold text-green-600">
                       {bookings.filter(b => b.status === 'CONFIRMED').length}
                     </span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Pending:</span>
+                    <span className="text-white">Pending:</span>
                     <span className="font-bold text-yellow-600">
                       {bookings.filter(b => b.status === 'PENDING').length}
                     </span>
@@ -131,8 +131,8 @@ const MyBookings = () => {
               </div>
 
               {/* Quick Actions */}
-              <div className="bg-gray-50 rounded-xl p-6 shadow-md">
-                <h3 className="text-lg font-bold text-gray-800 mb-4">Quick Actions</h3>
+              <div className="bg-[#0C0F1A] border-1 border-[#BDFF00] rounded-xl p-6 shadow-md">
+                <h3 className="text-lg font-bold text-white mb-4">Quick Actions</h3>
                 <div className="space-y-3">
                   <button 
                     className="btn w-full text-black font-bold hover:scale-105 transition-all duration-200 rounded-3xl"
@@ -142,7 +142,7 @@ const MyBookings = () => {
                     Book New Artist
                   </button>
                   <button 
-                    className="btn w-full bg-gray-600 hover:bg-gray-700 text-white border-gray-600 hover:border-gray-700 rounded-3xl"
+                    className="btn w-full bg-[#0C0F1A] border-1 border-[#BDFF00] text-white font-bold hover:scale-105 transition-all duration-200 rounded-3xl py-3"
                     onClick={loadBookings}
                   >
                     Refresh Bookings
@@ -152,8 +152,8 @@ const MyBookings = () => {
             </div>
 
             {/* Bookings List */}
-            <div className="bg-gray-50 rounded-xl p-8 shadow-md">
-              <h2 className="text-2xl font-bold mb-6 text-gray-800 border-b-2 border-[#BDFF00] pb-3">
+            <div className="bg-[#0C0F1A] border-1 border-[#BDFF00] rounded-xl p-8 shadow-md">
+              <h2 className="text-2xl font-bold mb-6 text-white border-b-2 border-[#BDFF00] pb-3">
                 {filter === 'ALL' ? 'All Bookings' : `${filter.charAt(0) + filter.slice(1).toLowerCase()} Bookings`} 
                 ({filteredBookings.length})
               </h2>
@@ -161,8 +161,8 @@ const MyBookings = () => {
               {filteredBookings.length === 0 ? (
                 <div className="text-center py-12">
                   <div className="text-6xl mb-4">📅</div>
-                  <h3 className="text-2xl font-bold text-gray-600 mb-2">No Bookings Found</h3>
-                  <p className="text-gray-500 mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">No Bookings Found</h3>
+                  <p className="text-white mb-6">
                     {filter === 'ALL' 
                       ? "You haven't made any bookings yet." 
                       : `No ${filter.toLowerCase()} bookings found.`
@@ -179,18 +179,18 @@ const MyBookings = () => {
               ) : (
                 <div className="grid gap-6">
                   {filteredBookings.map((booking) => (
-                    <div key={booking._id} className="bg-white rounded-lg p-6 shadow-md border-l-4 border-[#BDFF00]">
+                    <div key={booking._id} className="bg-[#0C0F1A] border-1 border-[#BDFF00] rounded-lg p-6 shadow-md">
                       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 items-center">
                         
                         {/* Booking Info */}
                         <div className="lg:col-span-2">
                           <div className="flex items-center gap-4 mb-3">
-                            <h3 className="text-xl font-bold text-gray-800">
+                            <h3 className="text-xl font-bold text-white">
                               {booking.artistId?.stageName || 'Unknown Artist'}
                             </h3>
                             {getStatusBadge(booking.status)}
                           </div>
-                          <div className="space-y-2 text-gray-600">
+                          <div className="space-y-2 text-white">
                             <p><span className="font-medium">Event:</span> {booking.eventName}</p>
                             <p><span className="font-medium">Date:</span> {new Date(booking.eventDate).toLocaleDateString()}</p>
                             <p><span className="font-medium">Location:</span> {booking.eventLocation}</p>
@@ -203,8 +203,8 @@ const MyBookings = () => {
 
                         {/* Event Details */}
                         <div>
-                          <h4 className="font-bold text-gray-800 mb-2">Event Details</h4>
-                          <div className="text-sm text-gray-600 space-y-1">
+                          <h4 className="font-bold text-white mb-2">Event Details</h4>
+                          <div className="text-sm text-white space-y-1">
                             <p><span className="font-medium">Type:</span> {booking.eventType}</p>
                             <p><span className="font-medium">Guests:</span> {booking.expectedGuests}</p>
                             {booking.specialRequests && (
@@ -212,7 +212,7 @@ const MyBookings = () => {
                             )}
                           </div>
                           <div className="mt-3">
-                            <p className="text-xs text-gray-500">
+                            <p className="text-xs text-white">
                               Booked: {new Date(booking.createdAt).toLocaleDateString()}
                             </p>
                           </div>

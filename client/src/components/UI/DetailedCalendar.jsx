@@ -142,7 +142,7 @@ export default function DetailedCalendar({ artistId, onDateTimeSelect, selectedD
           ${isBooked 
             ? 'bg-error text-error-content border-error cursor-not-allowed' 
             : isSelected
-              ? 'bg-primary text-primary-content border-primary' 
+              ? 'bg-[#BDFF00] text-black' 
               : hasAnySelection
                 ? 'bg-base-200 hover:bg-base-300 border-base-300'
                 : 'bg-base-200 hover:bg-base-300 border-base-300'
@@ -179,7 +179,7 @@ export default function DetailedCalendar({ artistId, onDateTimeSelect, selectedD
   });
 
   return (
-    <div className="bg-base-100 rounded-lg shadow-lg p-6">
+    <div className="bg-[#0C0F1A] rounded-lg shadow-lg p-6">
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-xl font-semibold flex items-center gap-2">
           📅 Available Times
@@ -235,7 +235,7 @@ export default function DetailedCalendar({ artistId, onDateTimeSelect, selectedD
 
       <div className="grid grid-cols-7 gap-2 mb-4">
         {['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map(day => (
-          <div key={day} className="text-center font-semibold p-2 bg-base-200 rounded">
+          <div key={day} className="text-center font-semibold p-2 bg-[#0C0F1A] border-1 border-[#BDFF00] rounded">
             {day}
           </div>
         ))}
@@ -253,9 +253,9 @@ export default function DetailedCalendar({ artistId, onDateTimeSelect, selectedD
               key={index}
               className={`
                 border rounded-lg p-2 min-h-[200px]
-                ${isToday ? 'border-primary border-2' : 'border-base-300'}
-                ${isPast ? 'opacity-50' : ''}
-                ${isSelected ? 'bg-primary/10' : 'bg-base-100'}
+                ${isToday ? 'border-[#BDFF00] border-1' : 'border-[#BDFF00] border-1'}
+                ${isPast ? 'bg-[#0C0F1A]' : ''}
+                ${isSelected ? 'bg-primary/10' : 'bg-[#0C0F1A]'}
               `}
             >
               <div className="text-center mb-2">
@@ -304,7 +304,7 @@ export default function DetailedCalendar({ artistId, onDateTimeSelect, selectedD
 
       {/* Booking Confirmation */}
       {selectedTimeSlots.length > 0 && (
-        <div className="mt-6 p-4 bg-primary/10 border border-primary rounded-lg">
+        <div className="mt-6 p-4 bg-[#0C0F1A] border border-[#BDFF00] rounded-lg">
           <div className="flex justify-between items-center">
             <div>
               <p className="font-semibold">
@@ -356,7 +356,8 @@ export default function DetailedCalendar({ artistId, onDateTimeSelect, selectedD
                   });
                 }
               }}
-              className="btn btn-primary"
+              className="btn text-black font-bold hover:scale-105 transition-all duration-200 rounded-3xl"
+              style={{backgroundColor: '#BDFF00', border: 'none'}}
             >
               Continue Booking
             </button>

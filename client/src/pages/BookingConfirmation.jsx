@@ -210,14 +210,15 @@ const BookingConfirmation = () => {
   }
 
   return (
-    <div className="h-[800px] bg-gray-600 flex items-center justify-center">
+    <div className="page-container-no-padding">
+    <div className="min-h-screen bg-[#0C0F1A] flex items-center rounded-xl justify-center">
       <div className="container mx-auto px-4 py-8 max-w-4xl">
       <div className="card bg-base-100 shadow-xl">
-        <div className="card-body">
+        <div className="card-body bg-[#0C0F1A] border-1 border-[#BDFF00] rounded-xl">
           <h1 className="card-title text-2xl mb-6">Confirm Booking</h1>
           
           {/* Artist Info */}
-          <div className="flex items-center gap-4 mb-6 p-4 bg-base-200 rounded-lg">
+          <div className="flex items-center gap-4 mb-6 p-4 bg-[#0C0F1A] border-1 border-[#BDFF00] rounded-lg">
             <img 
               src={artist.image} 
               alt={artist.name}
@@ -281,7 +282,7 @@ const BookingConfirmation = () => {
                   <span className="font-medium">{formatTimeRange()}</span>
                 </div>
                 
-                <div className="flex justify-between">
+                <div className="flex  justify-between">
                   <span>Duration:</span>
                   <span className="font-medium">
                     {(() => {
@@ -303,7 +304,7 @@ const BookingConfirmation = () => {
                   <span className="font-medium">{artist.pricePerHour}€</span>
                 </div>
                 
-                <div className="divider"></div>
+                <div className="divider h-0.5 bg-[#BDFF00]"></div>
                 
                 <div className="flex justify-between text-lg font-bold">
                   <span>Total price:</span>
@@ -318,10 +319,10 @@ const BookingConfirmation = () => {
               <form onSubmit={handleBookingSubmit} className="space-y-4">
                 <div>
                   <label className="label">
-                    <span className="label-text">Event Details *</span>
+                    <span className="label-text text-white font-bold">Event Details *</span>
                   </label>
                   <textarea
-                    className="textarea textarea-bordered w-full"
+                    className="textarea bg-[#0C0F1A] border-1 border-[#BDFF00] textarea-bordered w-full"
                     placeholder="Describe your event (type, location, number of guests, etc.)"
                     value={bookingForm.eventDetails}
                     onChange={(e) => setBookingForm(prev => ({
@@ -335,10 +336,10 @@ const BookingConfirmation = () => {
                 
                 <div>
                   <label className="label">
-                    <span className="label-text">Additional Notes</span>
+                    <span className="label-text text-white">Additional Notes</span>
                   </label>
                   <textarea
-                    className="textarea textarea-bordered w-full"
+                    className="textarea bg-[#0C0F1A] border-1 border-[#BDFF00] textarea-bordered w-full"
                     placeholder="Special requests or requirements"
                     value={bookingForm.notes}
                     onChange={(e) => setBookingForm(prev => ({
@@ -353,13 +354,14 @@ const BookingConfirmation = () => {
                   <button
                     type="button"
                     onClick={() => navigate(-1)}
-                    className="btn btn-outline flex-1"
+                    className="btn flex-1 bg-[#0C0F1A] border-1 border-[#BDFF00] text-white font-bold hover:scale-105 transition-all duration-200 rounded-3xl py-3"
                   >
-                    Zurück
+                    Cancel
                   </button>
                   <button
                     type="submit"
-                    className="btn btn-primary flex-1"
+                    className="btn flex-1 text-black font-bold hover:scale-105 transition-all duration-200 rounded-3xl"
+                    style={{backgroundColor: '#BDFF00', border: 'none'}}
                   >
                     Complete Booking
                   </button>
@@ -370,6 +372,7 @@ const BookingConfirmation = () => {
         </div>
       </div>
       </div>
+    </div>
     </div>
   );
 };

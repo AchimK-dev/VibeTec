@@ -7,14 +7,14 @@ import { AuthContextProvider } from '@/context';
 const RootLayout = () => {
   return (
     <AuthContextProvider>
-      <>
+      <div>
         <ToastContainer position='bottom-left' autoClose={1500} theme='colored' />
         <Navbar />
         <main>
           <Outlet />
         </main>
         <Footer />
-      </>
+      </div>
     </AuthContextProvider>
   );
 };
