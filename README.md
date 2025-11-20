@@ -8,6 +8,17 @@ A comprehensive DJ and artist booking platform featuring real-time calendar mana
 [![Tech Stack](https://img.shields.io/badge/Stack-MERN-blue)](#-tech-stack)
 [![License](https://img.shields.io/badge/License-Portfolio_Project-orange)](#-license)
 
+> **⚠️ Live Demo Note:** The application is hosted on Render's free tier. The first load may take 30-60 seconds as the server spins up after 15 minutes of inactivity.
+
+### 🔐 Demo Account
+
+Test the live demo with the following credentials:
+
+**Email:** `demo@vibetec.com`  
+**Password:** `demo`
+
+> **Note:** This demo account has read-only access to the admin panel, allowing you to explore all features without modifying data.
+
 ---
 
 ## 📋 Table of Contents
@@ -146,10 +157,6 @@ npm run dev
 
 - Frontend: `http://localhost:5173`
 - Backend API: `http://localhost:5000`
-
-### Demo Account
-
-For testing purposes, use the demo account feature to explore admin functionalities.
 
 ---
 

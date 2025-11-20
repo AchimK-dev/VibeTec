@@ -130,7 +130,7 @@ const MyBookings = () => {
                 className={`px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-lg font-semibold transition-all text-xs sm:text-sm md:text-base ${
                   filter === "ALL"
                     ? "bg-primary text-primary-content"
-                    : "bg-base-200 text-base-content hover:bg-neutral"
+                    : "bg-base-200 text-base-content hover:bg-primary hover:text-primary-content"
                 }`}
               >
                 All ({stats.total})
@@ -140,7 +140,7 @@ const MyBookings = () => {
                 className={`px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-lg font-semibold transition-all text-xs sm:text-sm md:text-base ${
                   filter === "PENDING"
                     ? "bg-primary text-primary-content"
-                    : "bg-base-200 text-base-content hover:bg-neutral"
+                    : "bg-base-200 text-base-content hover:bg-primary hover:text-primary-content"
                 }`}
               >
                 Pending ({stats.pending})
@@ -150,7 +150,7 @@ const MyBookings = () => {
                 className={`px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-lg font-semibold transition-all text-xs sm:text-sm md:text-base ${
                   filter === "CONFIRMED"
                     ? "bg-primary text-primary-content"
-                    : "bg-base-200 text-base-content hover:bg-neutral"
+                    : "bg-base-200 text-base-content hover:bg-primary hover:text-primary-content"
                 }`}
               >
                 Confirmed ({stats.confirmed})
@@ -160,7 +160,7 @@ const MyBookings = () => {
                 className={`px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-lg font-semibold transition-all text-xs sm:text-sm md:text-base ${
                   filter === "REJECTED"
                     ? "bg-primary text-primary-content"
-                    : "bg-base-200 text-base-content hover:bg-neutral"
+                    : "bg-base-200 text-base-content hover:bg-primary hover:text-primary-content"
                 }`}
               >
                 Rejected ({stats.rejected})
@@ -170,7 +170,7 @@ const MyBookings = () => {
                 className={`px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-lg font-semibold transition-all text-xs sm:text-sm md:text-base ${
                   filter === "CANCELLED"
                     ? "bg-primary text-primary-content"
-                    : "bg-base-200 text-base-content hover:bg-neutral"
+                    : "bg-base-200 text-base-content hover:bg-primary hover:text-primary-content"
                 }`}
               >
                 Cancelled ({stats.cancelled})

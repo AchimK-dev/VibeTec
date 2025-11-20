@@ -220,7 +220,7 @@ const BookingCard = ({ booking, onUpdate, onDelete }) => {
               onClick={() => setShowConfirmModal(true)}
               className="btn btn-sm bg-error text-error-content hover:bg-error/80 flex-1"
             >
-              ❌ {booking.isConfirmed ? "Stornieren" : "Cancel"}
+              ❌ {booking.isConfirmed ? "Cancel" : "Cancel"}
             </button>
           )}
         </div>
@@ -381,7 +381,7 @@ const BookingCard = ({ booking, onUpdate, onDelete }) => {
             <div className="modal-action">
               <button
                 onClick={() => setShowConfirmModal(false)}
-                className="btn bg-neutral text-base-content hover:bg-neutral/80"
+                className="btn bg-base-200 text-base-content hover:bg-base-300"
               >
                 Cancel
               </button>
@@ -395,7 +395,7 @@ const BookingCard = ({ booking, onUpdate, onDelete }) => {
                   }
                 }}
               >
-                {booking.isConfirmed ? "Stornieren" : "Abbrechen"}
+                {booking.isConfirmed ? "Cancel Booking" : "Delete Booking"}
               </button>
             </div>
           </div>

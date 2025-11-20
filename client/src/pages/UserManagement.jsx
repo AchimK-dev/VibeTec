@@ -257,7 +257,7 @@ const UserManagement = () => {
                   className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg font-medium transition-colors text-xs sm:text-sm md:text-base ${
                     filter === "all"
                       ? "bg-primary text-primary-content"
-                      : "bg-base-200 text-base-content hover:bg-neutral"
+                      : "bg-base-200 text-base-content hover:bg-base-200 hover:text-base-content"
                   }`}
                 >
                   All ({stats.total})
@@ -267,7 +267,7 @@ const UserManagement = () => {
                   className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg font-medium transition-colors text-xs sm:text-sm md:text-base ${
                     filter === "admin"
                       ? "bg-primary text-primary-content"
-                      : "bg-base-200 text-base-content hover:bg-neutral"
+                      : "bg-base-200 text-base-content hover:bg-base-200 hover:text-base-content"
                   }`}
                 >
                   Admins ({stats.admins})
@@ -277,7 +277,7 @@ const UserManagement = () => {
                   className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg font-medium transition-colors text-xs sm:text-sm md:text-base ${
                     filter === "user"
                       ? "bg-primary text-primary-content"
-                      : "bg-base-200 text-base-content hover:bg-neutral"
+                      : "bg-base-200 text-base-content hover:bg-base-200 hover:text-base-content"
                   }`}
                 >
                   Users ({stats.regularUsers})

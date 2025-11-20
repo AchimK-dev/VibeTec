@@ -47,9 +47,11 @@ const TableFilters = ({
             <button
               key={suggestion.id}
               onClick={() => onSuggestionSelect(suggestion)}
-              className="w-full px-4 py-3 text-left hover:bg-neutral transition-colors border-b border-gray-700 last:border-b-0"
+              className="w-full px-4 py-3 text-left hover:bg-base-200 hover:text-base-content transition-colors border-b border-gray-700 last:border-b-0"
             >
-              <div className="font-medium text-base-content">{suggestion.text}</div>
+              <div className="font-medium text-base-content">
+                {suggestion.text}
+              </div>
               {suggestion.subtext && (
                 <div className="text-sm text-base-content/60">
                   {suggestion.subtext}
