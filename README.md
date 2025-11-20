@@ -245,8 +245,8 @@ This project is part of my professional portfolio, showcasing expertise in moder
 ### Let's Connect
 
 - 📧 **Email:** [achimklein95@gmail.com](mailto:achimklein95@gmail.com)
-- 💼 **LinkedIn:** [linkedin.com/in/achim-klein](https://linkedin.com/in/achim-klein)
-- 💻 **GitHub:** [@AchimK-dev](https://www.linkedin.com/in/achim-klein-dev)
+- 💼 **LinkedIn:** [linkedin.com/in/achim-klein](https://www.linkedin.com/in/achim-klein-dev)
+- 💻 **GitHub:** [@AchimK-dev](https://github.com/AchimK-dev)
 
 ### Available For
 
