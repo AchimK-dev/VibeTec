@@ -246,7 +246,7 @@ This project is part of my professional portfolio, showcasing expertise in moder
 
 - 📧 **Email:** [achimklein95@gmail.com](mailto:achimklein95@gmail.com)
 - 💼 **LinkedIn:** [linkedin.com/in/achim-klein](https://linkedin.com/in/achim-klein)
-- 💻 **GitHub:** [@AchimK-dev](https://github.com/AchimK-dev)
+- 💻 **GitHub:** [@AchimK-dev](https://www.linkedin.com/in/achim-klein-dev)
 
 ### Available For
 
@@ -274,6 +274,6 @@ This project is publicly available for portfolio review and educational purposes
 
 **⭐ If you found this project interesting, please consider giving it a star!**
 
-Made with ❤️ by [Achim Klein](https://github.com/AchimK-dev)
+Made with ❤️ by [Achim Klein](https://www.linkedin.com/in/achim-klein-dev)
 
 </div>
