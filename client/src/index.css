@@ -1,0 +1,248 @@
+@import "tailwindcss";
+
+@plugin "daisyui";
+
+/* ============================================
+   DaisyUI Themes - Korrekte Syntax für v5
+   ============================================ */
+
+/* Light Theme - Default */
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+
+  /* Base colors - Hintergründe und Text */
+  --color-base-100: oklch(100% 0 0); /* Weiß */
+  --color-base-200: oklch(98% 0 0); /* Sehr helles Grau */
+  --color-base-300: oklch(95% 0 0); /* Helles Grau */
+  --color-base-content: oklch(21% 0.006 285.885); /* Dunkelgrau für Text */
+
+  /* Primary - Neon Grün */
+  --color-primary: oklch(90% 0.3 130); /* #bdff00 in OKLCH */
+  --color-primary-content: oklch(0% 0 0); /* Schwarz */
+
+  /* Secondary - Pink */
+  --color-secondary: oklch(65% 0.241 354.308); /* Pink */
+  --color-secondary-content: oklch(100% 0 0); /* Weiß */
+
+  /* Accent - Cyan */
+  --color-accent: oklch(80% 0.105 251.813); /* Cyan */
+  --color-accent-content: oklch(0% 0 0); /* Schwarz */
+
+  /* Neutral - Dunkelgrau */
+  --color-neutral: oklch(30% 0.01 270); /* Dunkelgrau */
+  --color-neutral-content: oklch(100% 0 0); /* Weiß */
+
+  /* Status colors */
+  --color-info: oklch(74% 0.16 232.661);
+  --color-info-content: oklch(0% 0 0);
+  --color-success: oklch(76% 0.177 163.223);
+  --color-success-content: oklch(0% 0 0);
+  --color-warning: oklch(82% 0.189 84.429);
+  --color-warning-content: oklch(0% 0 0);
+  --color-error: oklch(71% 0.194 13.428);
+  --color-error-content: oklch(100% 0 0);
+
+  /* Rounded corners */
+  --rounded-box: 1rem;
+  --rounded-btn: 0.5rem;
+  --rounded-badge: 1.9rem;
+
+  /* Animation */
+  --animation-btn: 0.25s;
+  --animation-input: 0.2s;
+
+  /* Border */
+  --border-btn: 1px;
+  --tab-border: 1px;
+  --tab-radius: 0.5rem;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Base colors - Dunkle Hintergründe */
+  --color-base-100: oklch(25.33% 0.016 252.42); /* Sehr dunkel */
+  --color-base-200: oklch(23.26% 0.014 253.1); /* Dunkler */
+  --color-base-300: oklch(21.15% 0.012 254.09); /* Am dunkelsten */
+  --color-base-content: oklch(
+    97.807% 0.029 256.847
+  ); /* Sehr helles Grau für Text */
+
+  /* Primary - Neon Grün (leuchtet im Dunkeln) */
+  --color-primary: oklch(90% 0.3 130); /* #bdff00 in OKLCH */
+  --color-primary-content: oklch(0% 0 0); /* Schwarz */
+
+  /* Secondary - Pink */
+  --color-secondary: oklch(65% 0.241 354.308); /* Pink */
+  --color-secondary-content: oklch(100% 0 0); /* Weiß */
+
+  /* Accent - Cyan */
+  --color-accent: oklch(80% 0.105 251.813); /* Cyan */
+  --color-accent-content: oklch(0% 0 0); /* Schwarz */
+
+  /* Neutral - Grau */
+  --color-neutral: oklch(30% 0.01 270); /* Dunkelgrau */
+  --color-neutral-content: oklch(100% 0 0); /* Weiß */
+
+  /* Status colors */
+  --color-info: oklch(74% 0.16 232.661);
+  --color-info-content: oklch(0% 0 0);
+  --color-success: oklch(76% 0.177 163.223);
+  --color-success-content: oklch(0% 0 0);
+  --color-warning: oklch(82% 0.189 84.429);
+  --color-warning-content: oklch(0% 0 0);
+  --color-error: oklch(71% 0.194 13.428);
+  --color-error-content: oklch(100% 0 0);
+
+  /* Rounded corners */
+  --rounded-box: 1rem;
+  --rounded-btn: 0.5rem;
+  --rounded-badge: 1.9rem;
+
+  /* Animation */
+  --animation-btn: 0.25s;
+  --animation-input: 0.2s;
+
+  /* Border */
+  --border-btn: 1px;
+  --tab-border: 1px;
+  --tab-radius: 0.5rem;
+}
+
+/* Container System für Responsive Design - Höhere Spezifität */
+.page-container {
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  max-width: 1920px !important; /* Full HD Maximum */
+  box-sizing: border-box !important;
+}
+
+/* Responsive Padding mit höherer Spezifität */
+@media (min-width: 640px) {
+  /* sm */
+  .page-container {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+}
+
+@media (min-width: 768px) {
+  /* md */
+  .page-container {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* lg */
+  .page-container {
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  /* xl */
+  .page-container {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  .page-container {
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+  }
+}
+
+/* Spezifische Overrides für DaisyUI Komponenten - Radikaler Ansatz */
+.bg-sky-950 {
+  background-color: rgb(12 74 110) !important;
+}
+
+/* Wrapper für maximale Breite */
+.max-width-wrapper {
+  max-width: 1920px !important;
+  margin: 0 auto !important;
+  width: 100% !important;
+}
+
+.navbar .page-container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  max-width: 1920px !important;
+  margin: 0 auto !important;
+}
+
+.footer .page-container {
+  max-width: 1920px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+
+/* Full-Width für spezielle Bereiche */
+.full-width {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  max-width: none;
+}
+
+/* Page Container ohne Padding für Grid-Layouts */
+.page-container-no-padding {
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  max-width: 1920px !important; /* Full HD Maximum */
+  box-sizing: border-box !important;
+}
+
+/* Custom Grid Layouts */
+.grid-1-2-1 {
+  display: grid !important;
+  grid-template-columns: 1fr 2fr 1fr !important;
+  gap: 1rem !important;
+}
+
+.grid-custom-3col {
+  display: grid !important;
+  grid-template-columns: 25% 50% 25% !important;
+  gap: 1rem !important;
+}
+
+/* Grid mit 1:2 Verhältnis für Reihen */
+.grid-rows-1-2 {
+  display: grid !important;
+  grid-template-rows: 1fr 2fr !important;
+  gap: 1rem !important;
+}
+
+/* Hide scrollbar for carousel */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+/* Smooth scrolling für Carousel */
+.scroll-smooth {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Optional: Verhindert "Rubber-Banding" am Anfang/Ende */
+.carousel-center {
+  overscroll-behavior-x: contain;
+}
